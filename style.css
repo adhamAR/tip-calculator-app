@@ -45,6 +45,7 @@ button{
     background-color: var(--clr-accent-500);
     cursor: pointer;
     color: var(--clr-neutral-600);
+    height: 3rem;
 }
 input[type="radio"]{
     display: none;
@@ -73,27 +74,27 @@ input:is(:hover, :focus){
     display: grid;
     min-height: 100vh;
     min-height: 100dvh;
-    grid-template-rows: auto 1fr;
 }
 .title{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    padding-block: 3.125rem 2.5rem;
 }
 .input__title{
     font-size: var(--fs-1000);
+    grid-column: 1 / -1;
 }
 .card{
     background-color: var(--clr-neutral-100);
     display: grid;
-    padding: 1.75rem;
     border-radius: 1.5rem 1.5rem 0 0;
-    gap: 2rem
+    height: 49.3125rem;
 }
 .card__input{
     display: grid;
-    gap: 1rem;
+    gap: 2.4375rem;
+    padding: 2.4375rem 2rem 0;
 }
 .input__bill{
     display: grid;
@@ -126,7 +127,8 @@ input:is(:hover, :focus){
     background-color: var(--clr-neutral-600);
     border-radius: 1rem;
     overflow: hidden;
-    padding: 2rem 1.5rem;
+    padding: 2.875rem 1.375rem 1.5rem;
+    margin: 2rem 1.5rem;
     display: grid;
     gap: 1rem;
 }
@@ -163,3 +165,4 @@ input:invalid{
 .custom__input:is(:hover, :focus) + .custom__label{
     opacity: 0;
 }
+@media()
