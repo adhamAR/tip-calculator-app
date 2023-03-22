@@ -3,42 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <div class="wrapper">
+    <header class="title">
+      <img src="images/logo.svg" alt="SPLITTER logo">
+    </header>
+    <main class="card">
+      <div class="card__input">
+        <div class="input__bill">
+          <label class="input__title" for="bill">Bill</label>
+          <input class="bill-input" type="number" name="bill" min="0">
+        </div>
+        <label class="input__title">Select Tip %</label>
+        <div class="input__tip">
+          <input type="radio" name="tip" id="0.05" value="0.05">
+          <label for="0.05" class="tip__label">5%</label>
 
-  Bill
+          <input type="radio" name="tip" id="0.1" value="0.1">
+          <label for="0.1" class="tip__label">10%</label>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          <input type="radio" name="tip" id="0.15" value="0.15">
+          <label for="0.15" class="tip__label">15%</label>
 
-  Number of People
+          <input type="radio" name="tip" id="0.25" value="0.25">
+          <label for="0.25" class="tip__label">25%</label>
 
-  Tip Amount
-  / person
+          <input type="radio" name="tip" id="0.5" value="0.5">
+          <label for="0.5" class="tip__label">50%</label>
 
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+          <input class="custom__input" type="text" name="tip" min="0" placeholder="Custom">
+        </div>
+        <div class="input__people">
+          <label for="people" class="input__title">Number of People</label>
+          <input class="people-input" type="number" name="people" id="people" step="1">
+        </div>
+      </div>
+      <div class="card__output">
+        <div class="output">
+          <div class="amount-wrapper">
+            <div class="title-wrapper">
+              <h1 class="output__title">Tip Amount</h1>
+              <p>/ person</p>
+            </div>
+            <span class="tip__value">$0.00</span>
+          </div>
+          <div class="amount-wrapper">
+            <div class="title-wrapper">
+              <h2 class="output__title">Total</h2>
+              <p>/ person</p>
+            </div>
+            <span class="total__value">$0.00</span>
+          </div>
+        </div>
+        <button type="reset" class="reset">RESET</button>
+      </div>
+    </main>
   </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zubair Adham</a>.
+  </footer>
 </body>
 </html>
