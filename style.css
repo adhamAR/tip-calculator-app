@@ -42,7 +42,7 @@ body{
     color: var(--clr-neutral-500);
     background-color: var(--clr-neutral-300);
 }
-button{
+.reset{
     border: 0;
     border-radius: var(--br-big);
     background-color: var(--clr-accent-500);
@@ -72,6 +72,15 @@ input[type="number"], input[type="text"]{
 input:is(:hover, :focus){
     outline: 2px solid var(--clr-accent-500);
     cursor: pointer;
+}
+.flex-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.type-validation, .zero-validation{
+    color: rgba(255, 25, 0, .7);
+    font-size: var(--fs-1000);
 }
 .wrapper{
     display: grid;
@@ -116,7 +125,7 @@ input:is(:hover, :focus){
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
-.tip__label{
+.tip__percent{
     background-color: var(--clr-neutral-600);
     font-size: var(--fs-1500);
     border-radius: var(--br-small);
@@ -154,15 +163,15 @@ input:is(:hover, :focus){
     font-size: var(--fs-1500);
 }
 /* active states */
-input[type="radio"]:checked + label{
+.selected{
     background-color: var(--clr-accent-500);
     color: var(--clr-neutral-600);
 }
-button:is(:hover, :focus){
+button:is(:hover){
     background-color: var(--clr-neutral-300);
 }
 input:invalid{
-    outline: 2px solid red;
+    outline: 2px solid rgba(255, 25, 0, .7);;
 }
 .custom__input{
     font-size: var(--fs-1250);

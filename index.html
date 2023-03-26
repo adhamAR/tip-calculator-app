@@ -22,31 +22,27 @@
     <main class="card">
       <div class="card__input">
         <div class="input__bill">
-          <label class="input__title" for="bill">Bill</label>
-          <input class="bill-input" type="number" name="bill" min="0">
+          <div class="flex-group">
+            <label class="input__title" for="bill">Bill</label>
+            <span class="type-validation"></span>
+          </div>
+          <input class="bill-input" id="bill" type="number" name="bill" min="0" placeholder="0.00">
         </div>
         <div class="input__tip">
           <label class="input__title">Select Tip %</label>
-          <input type="radio" name="tip" id="0.05" value="0.05">
-          <label for="0.05" class="tip__label">5%</label>
-
-          <input type="radio" name="tip" id="0.1" value="0.1">
-          <label for="0.1" class="tip__label">10%</label>
-
-          <input type="radio" name="tip" id="0.15" value="0.15">
-          <label for="0.15" class="tip__label">15%</label>
-
-          <input type="radio" name="tip" id="0.25" value="0.25">
-          <label for="0.25" class="tip__label">25%</label>
-
-          <input type="radio" name="tip" id="0.5" value="0.5">
-          <label for="0.5" class="tip__label">50%</label>
-
-          <input class="custom__input" type="text" name="tip" min="0" placeholder="Custom">
+          <div class="tip__percent" data-percentage="5">5%</div>
+          <div class="tip__percent" data-percentage="10">10%</div>
+          <div class="tip__percent" data-percentage="15">15%</div>
+          <div class="tip__percent" data-percentage="25">25%</div>
+          <div class="tip__percent" data-percentage="50">50%</div>
+          <input class="custom__input" type="number" min="0" placeholder="Custom">
         </div>
         <div class="input__people">
-          <label for="people" class="input__title">Number of People</label>
-          <input class="people-input" type="number" name="people" id="people" step="1">
+          <div class="flex-group">
+            <label for="people" class="input__title">Number of People</label>
+            <span class="zero-validation"></span>
+          </div>
+          <input class="people-input" type="number" name="people" id="people" step="1" value="1">
         </div>
       </div>
       <div class="card__output">
